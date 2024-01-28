@@ -32,6 +32,19 @@ async function fetchCities() {
 function addCityToDOM(id, city, description, image) {
   // TODO: MODULE_CITIES
   // 1. Populate the City details and insert those details into the DOM
+  let container = document.createElement("div");
+  container.className = "col-12 col-sm-6 col-lg-3 mb-4";
+  let innerHTML = `<a id="${id}" href="pages/adventures/?city=${id}">
+  <div class="tile">
+    <img src="${image}" />
+    <div class="tile-text text-center">
+      <h5>${city}</h5>
+      <p>${description}</p>
+    </div>
+  </div>
+</a>`;
+  container.innerHTML =  innerHTML;
+  document.getElementById("data").appendChild(container);
 
 }
 
