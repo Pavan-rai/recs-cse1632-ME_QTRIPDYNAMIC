@@ -3,6 +3,9 @@ import config from "../conf/index.js";
 async function init() {
   //Fetches list of all cities along with their images and description
   let cities = await fetchCities();
+  console.log('From init()');
+  console.log(config.backendEndpoint);
+  console.log(cities);
 
   //Updates the DOM with the cities
   if (cities) {
@@ -16,7 +19,13 @@ async function init() {
 async function fetchCities() {
   // TODO: MODULE_CITIES
   // 1. Fetch cities using the Backend API and return the data
-
+   let res = fetch(config.backendEndpoint+"/cities").then((res) =>{
+      return res.json();
+   }).catch((err)=>{
+     console.log(err);
+     return null;
+   });
+  return res;
 }
 
 //Implementation of DOM manipulation to add cities
