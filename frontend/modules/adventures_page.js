@@ -3,12 +3,10 @@ import config from "../conf/index.js";
 
 //Implementation to extract city from query params
 function getCityFromURL(search) {
-  // TODO: MODULE_ADVENTURES
+  // TODO: MODULE_ADVENTURESc
   // 1. Extract the city id from the URL's Query Param and return it
   let str = search.split('=');
-
   return str[1];
-
 
 }
 
@@ -23,12 +21,14 @@ async function fetchAdventures(city) {
   } catch(err){
      return null;
   }
+
 }
 
 //Implementation of DOM manipulation to add adventures for the given city from list of adventures
 function addAdventureToDOM(adventures) {
   // TODO: MODULE_ADVENTURES
   // 1. Populate the Adventure Cards and insert those details into the DOM
+
   adventures.forEach(function(item){
     let container = document.createElement("div");
     container.className = "col-6 col-lg-3 mb-3";
@@ -48,6 +48,7 @@ function addAdventureToDOM(adventures) {
     document.getElementById("data").appendChild(container);
 
   });
+
 
 
 }
