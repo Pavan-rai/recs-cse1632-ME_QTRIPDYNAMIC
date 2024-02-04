@@ -138,6 +138,15 @@ function getFiltersFromLocalStorage() {
 function generateFilterPillsAndUpdateDOM(filters) {
   // TODO: MODULE_FILTERS
   // 1. Use the filters given as input, update the Duration Filter value and Generate Category Pills
+  let duration = filters.duration.split("-");
+  let data = getFiltersFromLocalStorage();
+  filters.category.forEach(function(item){
+    let container = document.createElement("div");
+    container.className = "category-filter";
+    let innerHTML = `<p>${item}</p>`;
+    container.innerHTML =  innerHTML;
+    document.getElementById("category-list").appendChild(container);
+  });
 
 
 }
