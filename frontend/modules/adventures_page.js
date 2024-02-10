@@ -7,6 +7,8 @@ function getCityFromURL(search) {
   // 1. Extract the city id from the URL's Query Param and return it
   let str = search.split('=');
   return str[1];
+  // TODO: MODULE_ADVENTURES
+  // 1. Extract the city id from the URL's Query Param and return it
 
 }
 
@@ -109,6 +111,8 @@ function filterFunction(list, filters) {
 
   // Place holder for functionality to work in the Stubs
   return filteredList;
+
+  // Place holder for functionality to work in the Stubs
 }
 
 //Implementation of localStorage API to save filters to local storage. This should get called everytime an onChange() happens in either of filter dropdowns
@@ -129,6 +133,10 @@ function getFiltersFromLocalStorage() {
 
   // Place holder for functionality to work in the Stubs
   return filters;
+
+
+  // Place holder for functionality to work in the Stubs
+
 }
 
 //Implementation of DOM manipulation to add the following filters to DOM :
